@@ -1,0 +1,8 @@
+[package]
+name = "snake_game"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+k_board = { version = "1.2.5", features = ["lower_letter", "upper_letter"] }
+rand = "0.8.5"
