@@ -176,11 +176,12 @@ fn setup_snake(snake: &mut Snake) {
 
 fn game_rules(snake: &mut Snake, food: &mut Foods) {
     for i in 0..FOODS {
-        if !food.items[i].consumed {
-            if food.items[i].x == snake.parts[0].x && food.items[i].y == snake.parts[0].y {
-                food.items[i].consumed = true;
-                snake.length += 1;
-            }
+        if !food.items[i].consumed
+            && food.items[i].x == snake.parts[0].x
+            && food.items[i].y == snake.parts[0].y
+        {
+            food.items[i].consumed = true;
+            snake.length += 1;
         }
     }
 
